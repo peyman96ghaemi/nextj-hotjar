@@ -17,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <Script
+      <body className={inter.className}>{children}
+      <Script
           id="show-banner"
           dangerouslySetInnerHTML={{
             __html: `(function(h,o,t,j,a,r){
@@ -31,8 +31,7 @@ export default function RootLayout({
           })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=')`,
           }}
         ></Script>
-      </head>
-      <body className={inter.className}>{children}</body>
+      </body>
     </html>
   );
 }
